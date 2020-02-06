@@ -1,18 +1,17 @@
 require 'date'
+require 'pry'
 
 class Person
-
-    attr_accessor :name
-    attr_accessor :cash
-    attr_accessor :account
+    attr_accessor :name, :cash, :account    
 
   def initialize (attrs = {})
+    binding.pry
     set_name(attrs[:name])
     @cash = 0
   end
 
-  def set_account(account)
-    @account = nil
+  def account_to_nil
+    @account = :account
   end
 end
 

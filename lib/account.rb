@@ -1,4 +1,6 @@
 require 'date'
+require 'pry'
+
 
 class Account
     attr_accessor :account_status
@@ -7,6 +9,7 @@ class Account
     STANDARD_VAILIDITY_YRS = 5
 
     def initialize (attrs = {})
+        binding,pry
         @account_status = :active
         set_owner(attrs[:owner])
     end
